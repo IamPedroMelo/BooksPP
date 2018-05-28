@@ -15,6 +15,11 @@ public class BooksDbOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        DbTableCategories dbTableCategories = new DbTableCategories(db);
+        dbTableCategories.create();
+
+        DbTableBooks dbTableBooks = new DbTableBooks(db);
+        dbTableBooks.create();
 
     }
 
